@@ -25,6 +25,11 @@
 recordcount=100000000
 operationcount=1000000
 workload=site.ycsb.workloads.CoreWorkload
+# The number of fields in a record
+fieldcount=10
+
+# The size of each field (in bytes)
+fieldlength=40
 
 readallfields=true
 
