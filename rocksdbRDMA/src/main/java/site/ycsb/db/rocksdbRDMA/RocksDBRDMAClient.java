@@ -104,7 +104,8 @@ public class RocksDBRDMAClient extends DB {
     RocksDB.loadLibrary();
     OptionsUtil.loadOptionsFromFile(optionsFile.toAbsolutePath().toString(), Env.getDefault(), options, cfDescriptors);
     dbOptions = options;
-
+    System.out.print("loaded column family name is \n");
+    System.out.print(cfDescriptors.toString());
     final RocksDB db = RocksDB.open(options, rocksDbDir.toAbsolutePath().toString(), cfDescriptors, cfHandles);
 
     for(int i = 0; i < cfDescriptors.size(); i++) {
@@ -131,8 +132,7 @@ public class RocksDBRDMAClient extends DB {
     }
 
     final List<String> cfNames = loadColumnFamilyNames();
-    System.out.print("loaded column family name is \n");
-    System.out.print(cfNames);
+
     final List<ColumnFamilyOptions> cfOptionss = new ArrayList<>();
     final List<ColumnFamilyDescriptor> cfDescriptors = new ArrayList<>();
 
