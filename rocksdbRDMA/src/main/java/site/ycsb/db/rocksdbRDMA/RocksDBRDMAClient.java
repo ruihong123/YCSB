@@ -131,7 +131,7 @@ public class RocksDBRDMAClient extends DB {
     }
 
     final List<String> cfNames = loadColumnFamilyNames();
-    System.out.print("loaded column family name is ");
+    System.out.print("loaded column family name is \n");
     System.out.print(cfNames);
     final List<ColumnFamilyOptions> cfOptionss = new ArrayList<>();
     final List<ColumnFamilyDescriptor> cfDescriptors = new ArrayList<>();
