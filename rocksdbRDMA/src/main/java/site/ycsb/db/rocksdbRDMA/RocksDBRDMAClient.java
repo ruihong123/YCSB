@@ -344,6 +344,8 @@ public class RocksDBRDMAClient extends DB {
         }
       }
     }
+    System.out.print("loaded column family name is ");
+    System.out.print(cfNames.toString());
     return cfNames;
   }
 
